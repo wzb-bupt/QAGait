@@ -17,26 +17,26 @@ Usages:
     ### Gait3D ###
     ##############
         python qagait_pretreatment.py \
-            -i /data/wangzengbin/Gait3D/Silhouette/2D_Silhouettes \
-            -o /data/wangzengbin/Gait3D/Silhouette/QA-Gait3D-Release-20240521 \
-            -template /data/wangzengbin/Template/Template-frames-30-height-0-1-2-pkl/ \
+            -i /data/Gait3D/Silhouette/2D_Silhouettes \
+            -o /data/Gait3D/Silhouette/QA-Gait3D \
+            -template /data/Template/Template-frames-30-height-0-1-2-pkl/ \
             -d Gait3D
 
     ##############
     ###  GREW  ###
     ##############
         python qagait_pretreatment.py \
-            -i /data/wangzengbin/GREW/GREW-Sihouette-Rearange \
-            -o /data/wangzengbin/GREW/QA-GREW-Release-20240521 \
-            -template /data/wangzengbin/Template/Template-frames-30-height-0-1-2-pkl/ \
+            -i /data/GREW/GREW-Sihouette-Rearange \
+            -o /data/GREW/QA-GREW \
+            -template /data/Template/Template-frames-30-height-0-1-2-pkl/ \
             -d GREW
 
     ##############
     ## CASIA-B  ##
         python qagait_pretreatment.py \
-            -i /data/wangzengbin/CASIA-B/Silhouette/GaitDatasetB-silh \
-            -o /data/wangzengbin/CASIA-B/Silhouette/QA-CASIA-B-Release-20240521 \
-            -template /data/wangzengbin/Template/Template-frames-30-height-0-1-2-pkl/ \
+            -i /data/CASIA-B/Silhouette/GaitDatasetB-silh \
+            -o /data/CASIA-B/Silhouette/QA-CASIA-B \
+            -template /data/Template/Template-frames-30-height-0-1-2-pkl/ \
             -d CASIA-B 
 '''
 

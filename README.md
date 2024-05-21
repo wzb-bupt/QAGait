@@ -28,6 +28,14 @@ Gait recognition is a promising biometric method that aims to identify pedestria
 
 ------------------------------------------
 
+## TODO LIST
+
+- [x] Release Quality Assessment (Pretreatment)
+- [ ] Release Quality-aware Feature Learning
+- [ ] Provide pretreatment log and training log
+
+------------------------------------------
+
 ## 0. Get Started
 - clone this repo.
     ```
@@ -55,14 +63,6 @@ Gait recognition is a promising biometric method that aims to identify pedestria
     pip install torch==1.10 torchvision==0.11
     ```
 - Prepare dataset: See [prepare dataset](datasets).
-
-------------------------------------------
-
-## TODO LIST
-
-- [x] Release Quality Assessment (Pretreatment)
-- [ ] Release Quality-aware Feature Learning
-- [ ] Provide pretreatment log and training log
 
 ------------------------------------------
 

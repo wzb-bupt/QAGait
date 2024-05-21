@@ -76,7 +76,7 @@ cd ./datasets
 python qagait_pretreatment.py \
     -i /data/Gait3D/Silhouette/2D_Silhouettes \                      # <your dataset path>
     -o /data/Gait3D/Silhouette/QA-Gait3D \                           # <your output root>
-    -template /data/Template/Template-frames-30-height-0-1-2-pkl/ \  # <the template path>
+    -template /data/Template/Template-frames-30-height-0-1-2-pkl/ \  # <your template path>
     -d Gait3D                                                        # <dataset name>
 ```
 
@@ -89,7 +89,7 @@ cd ./datasets
 python qagait_pretreatment.py \
     -i /data/GREW/Silhouette/GREW-Sihouette \                        # <your dataset path>
     -o /data/GREW/Silhouette/QA-GREW \                               # <your output root>
-    -template /data/Template/Template-frames-30-height-0-1-2-pkl/ \  # <the template path>
+    -template /data/Template/Template-frames-30-height-0-1-2-pkl/ \  # <your template path>
     -d GREW                                                          # <dataset name>
 ```
 
@@ -102,7 +102,7 @@ cd ./datasets
 python qagait_pretreatment.py \
     -i /data/CASIA-B/Silhouette/GaitDatasetB-silh \                  # <your dataset path>
     -o /data/CASIA-B/Silhouette/QA-CASIA-B \                         # <your output root>
-    -template /data/Template/Template-frames-30-height-0-1-2-pkl/ \  # <the template path>
+    -template /data/Template/Template-frames-30-height-0-1-2-pkl/ \  # <your template path>
     -d CASIA-B                                                       # <dataset name>
 ```
 

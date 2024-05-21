@@ -58,6 +58,14 @@ Gait recognition is a promising biometric method that aims to identify pedestria
 
 ------------------------------------------
 
+## TODO LIST
+
+- [x] Release Quality Assessment (Pretreatment)
+- [ ] Release Quality-aware Feature Learning
+- [ ] Provide pretreatment log and training log
+
+------------------------------------------
+
 ## 1. Unified Silhouette Quality Assessment (Quality-aware Pretreatment)
 
  - Including: Maximal Connect Area, Template Match, Alignment.

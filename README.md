@@ -127,7 +127,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
 python -m torch.distributed.launch \
 --nproc_per_node=8 \
 --master_port 12345 \
-opengait/main2.py \
+opengait/main.py \
 --cfgs ./configs/QAGait/QAGait3D_QAGait_GaitBase.yaml \
 --phase train \
 --log_to_file
@@ -138,7 +138,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
 python -m torch.distributed.launch \
 --nproc_per_node=8 \
 --master_port 12345 \
-opengait/main2.py \
+opengait/main.py \
 --cfgs ./configs/QAGait/QAGait3D_QAGait_GaitBase.yaml \
 --phase test \
 --log_to_file

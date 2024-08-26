@@ -31,8 +31,7 @@ Gait recognition is a promising biometric method that aims to identify pedestria
 ## TODO LIST
 
 - [x] Release Quality Assessment (Pretreatment)
-- [ ] Release Quality-aware Feature Learning
-- [ ] Provide pretreatment log and training log
+- [x] Release Quality-aware Feature Learning
 
 ------------------------------------------
 
@@ -40,9 +39,10 @@ Gait recognition is a promising biometric method that aims to identify pedestria
 - clone this repo.
     ```
     git clone https://github.com/wzb-bupt/QAGait.git
+    cd QAGait
     ```
 - Install dependenices:
-    - pytorch >= 1.10
+    - pytorch >= 1.13
     - torchvision
     - pyyaml
     - tensorboard
@@ -51,16 +51,12 @@ Gait recognition is a promising biometric method that aims to identify pedestria
     - py7zr
     - kornia
     - einops
-  
-    Install dependenices by [Anaconda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html):
+    - imageio
+    - matplotlib
+    - scikit-learn
     ```
-    conda install tqdm pyyaml tensorboard opencv kornia einops -c conda-forge
-    conda install pytorch==1.10 torchvision -c pytorch
-    ```    
-    Or, Install dependenices by pip:
-    ```
-    pip install tqdm pyyaml tensorboard opencv-python kornia einops
-    pip install torch==1.10 torchvision==0.11
+    pip install pyyaml tensorboard opencv-python tqdm py7zr kornia einops imageio matplotlib scikit-learn
+    pip install torch==1.13.0+cu117 torchvision==0.14.0+cu117 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu117
     ```
 - Prepare dataset: See [prepare dataset](datasets).
 
@@ -125,14 +121,27 @@ python qagait_pretreatment.py \
        <img src="asserts/figure04.png"  width = "" height = "200" alt="probe1-After" />
 </div>
 
+### Train
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
-    python -m torch.distributed.launch \
-    --nproc_per_node=8 \
-    opengait/main.py \
-    --cfgs ./configs/qagait/QAGait_QAGait3D_GaitBase.yaml \
-    --phase train \
-    --log_to_file
+python -m torch.distributed.launch \
+--nproc_per_node=8 \
+--master_port 12345 \
+opengait/main2.py \
+--cfgs ./configs/QAGait/QAGait3D_QAGait_GaitBase.yaml \
+--phase train \
+--log_to_file
+```
+### Test
+```
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
+python -m torch.distributed.launch \
+--nproc_per_node=8 \
+--master_port 12345 \
+opengait/main2.py \
+--cfgs ./configs/QAGait/QAGait3D_QAGait_GaitBase.yaml \
+--phase test \
+--log_to_file
 ```
 
 ------------------------------------------
